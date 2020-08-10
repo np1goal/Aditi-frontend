@@ -1,0 +1,208 @@
+#confessions {
+    display: grid;
+    grid-template-rows: 10vh 25vh 5vh auto;
+    grid-template-areas:    'navigation-bar'
+                            'add-confessions'
+                            '.'
+                            'made-confessions';
+}
+
+#navigation-bar {
+    grid-area: navigation-bar;
+}
+
+#add-confessions {
+    grid-area: add-confessions;
+    display: grid;
+    grid-template-rows: 20vh 5vh;
+    grid-template-areas:    'confession-reason'
+                            'confession-button';
+}
+
+#confession-reason {
+    grid-area: confession-reason;
+    margin: auto 10%;
+    color: white;
+    font-size: 1.1em;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
+
+#confession-reason::first-letter {
+    font-size: 2em;
+}
+
+#confession-button {
+    grid-area: confession-button;
+    z-index: 97;
+}
+
+#iconfess-button {
+    float: right;
+    margin-right: 10%;
+}
+
+#confession-card {
+    display: none;
+    position: fixed;
+    width: 75%;
+    height: 40vh;
+    left: 10%;
+    top: 20%;
+    margin: auto;
+    z-index: 1;
+    background-color: white;
+    -webkit-box-shadow: -1px 10px 23px 7px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 10px 23px 7px rgba(0,0,0,0.75);
+    box-shadow: -1px 10px 23px 7px rgba(0,0,0,0.75);
+    grid-template-rows: 3vh 1vh 7vh 1vh 22vh 1vh 5vh;
+    grid-template-areas:    'close-button'
+                            '.'
+                            'feeling-button'
+                            '.'
+                            'confession-text'
+                            '.'
+                            'confession-submit-button';
+}
+
+@-webkit-keyframes confession-card-entry-animation {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes confession-card-exit-animation {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+}
+
+#close-button {
+    grid-area: close-button;
+}
+
+#close {
+    float: right;
+    cursor: pointer;
+}
+
+#feeling-button {
+    grid-area: feeling-button;
+    display: grid;
+    grid-template-columns: 35% 2% auto;
+    grid-template-areas: 'feeling-list . feeling-selected'
+}
+
+#feeling-list {
+    grid-area: feeling-list;
+    margin: auto 0;
+}
+
+#feeling-form-field {
+    height: 6vh;
+    padding: 2px;
+}
+
+#feeling-selected {
+    grid-area: feeling-selected;
+    position: relative;
+}
+
+#feeling-selected-error {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    font-size: 0.8em;
+    color: rgba(255, 0, 0, 0.7);
+}
+
+#confession-text{
+    grid-area: confession-text;
+}
+
+#confession-form-field {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+#confession-submit-button {
+    grid-area: confession-submit-button;
+}
+
+#submit-button {
+    float: right;
+    background-color: #00214e;
+    color: #fff;
+}
+
+#made-confessions {
+    grid-area: made-confessions;
+}
+
+#made-confessions mat-card {
+    width: 80%;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#confessions-list {
+    color: #fff;
+    font-size: 1.3em;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
+
+#emotions {
+    color: #00c3d1;
+    font-size: 0.7em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@media only screen and (max-width: 850px) {
+
+    #confession-card {
+        height: 50vh;
+        grid-template-rows: 3vh 1vh 17vh 1vh 22vh 1vh 5vh;
+    }
+
+    #feeling-button {
+        grid-template-rows: 7vh 4vh 6vh;
+        grid-template-columns: 100%;
+        grid-template-areas:    'feeling-list'
+                                '.'
+                                'feeling-selected';
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    #confessions {
+        grid-template-rows: 15vh 70vh auto;
+    }
+
+    #add-confessions {
+        grid-template-rows: 45vh 5vh;
+    }
+
+    #confession-card {
+        height: 70vh;
+        grid-template-rows: 3vh 1vh 27vh 1vh 32vh 1vh 5vh;
+    }
+
+    #feeling-button {
+        grid-template-rows: 7vh 4vh 16vh;
+        grid-template-columns: 100%;
+        grid-template-areas:    'feeling-list'
+                                '.'
+                                'feeling-selected';
+    }
+}

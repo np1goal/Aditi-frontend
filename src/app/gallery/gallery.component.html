@@ -1,0 +1,43 @@
+<div class="document">
+    <div id="gallery">
+        <app-navigation-bar id="navigation-bar"></app-navigation-bar>
+        <div id="toggle-bar">
+            <button class="toggle-button" mat-raised-button>Drawings</button>
+            <button class="toggle-button" mat-raised-button>Confessions</button>
+        </div>
+        <div id="arts">
+            <br><br>
+            <div id="art-description">
+                <mat-card id="art-description-card">
+                    <div id="close">
+                        <mat-icon id="close-icon" (click)="closeArtDescription()">clear</mat-icon>
+                    </div>
+                    <div id="card-info">
+                        <div id="art-image">
+                            <img id="image-art-description">
+                        </div>
+                        <div id="art-info">
+                            <div id="artist-name-heading">Artist: </div>
+                            <div id="artist-name">Aditi Ray</div>
+                            <div id="art-story-heading">Story: </div>
+                            <div id="art-story"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                        </div>
+                    </div>
+                </mat-card>
+            </div>
+            <div id="left-arrow" (click)='leftArrow()'><img class="arrow" src="../../assets/left-arrow.png"></div>
+            <div id="right-arrow" (click)='rightArrow()'><img class="arrow" src="../../assets/right-arrow.png"></div>
+            <div id="all-art">
+                <div id="drawing-art">
+                    <div class="slide" *ngFor="let drawingArt of drawingArtNames">
+                        <mat-card class="design-art-card"  (click)="getArtInfo(drawingArt)">
+                            <img class="display-image" [attr.src]="drawingArt">
+                        </mat-card>
+                    </div> 
+                </div>
+                <div id="confession-art">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

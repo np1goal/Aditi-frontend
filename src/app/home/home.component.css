@@ -1,0 +1,247 @@
+#home-document {
+    min-height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 10vh 10vh 10vh 30vh 10vh 10vh auto;
+    grid-template-areas:    '.'
+                            'welcome-text'
+                            '.'
+                            'logo'
+                            '.'
+                            'buttons';
+    background: url('../../assets/background.png');
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+}
+
+#welcome-text {
+    grid-area: welcome-text;
+    text-align: center;
+    font-size: 5em;
+}
+
+#logo {
+    grid-area: logo;
+    display: grid;
+    grid-template-columns: 43% auto;
+    grid-template-areas: 'aditi-logo-1 aditi-logo-2';
+    color: #000000;
+}
+
+#aditi-logo-1 {
+    position: relative;
+    grid-area: aditi-logo-1;
+    text-align: right;
+    animation: aditi-logo-1-animation 1s forwards;
+}
+
+img {
+    height: 30vh;
+    width: 17vw;
+}
+
+@-webkit-keyframes aditi-logo-1-animation {
+    0% {
+        transform: translateX(-50vw);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#aditi-logo-2 {
+    grid-area: aditi-logo-2;
+    font-size: 14em;
+    animation: aditi-logo-2-animation 1s forwards;
+}
+
+@-webkit-keyframes aditi-logo-2-animation {
+    0% {
+        transform: translateX(50vw);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#buttons {
+    grid-area: buttons;
+}
+
+.nav-buttons {
+    left: 40%;
+    color: #fff;
+    font-size: 1em;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #00214e;
+    margin-right: 2vw;
+    padding: 1vw 2vw;
+    -webkit-box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.75);
+}
+
+@media only screen and (max-width: 650px) { 
+
+    #home-document {
+        grid-template-rows: 5vh 5vh 5vh 30vh 5vh 5vh auto;
+    }
+
+    #welcome-text {
+        font-size: 2em;
+    }
+
+    #logo {
+        grid-template-columns: 10% auto;
+    }
+
+    #aditi-logo-2 {
+        font-size: 7em;
+    }
+
+    img {
+        height: 20vh;
+        width: 23vw;
+    }
+
+    .nav-buttons {
+        left: 15%;
+    }
+}
+
+@media only screen and (max-width: 750px) { 
+
+    #logo {
+        grid-template-columns: 40% auto;
+    }
+
+    #aditi-logo-2 {
+        font-size: 13em;
+    }
+
+    img {
+        height: 28vh;
+        width: 19vw;
+    }
+
+    .nav-buttons {
+        left: 37%;
+    }
+}
+
+@media only screen and (max-width: 800px) { 
+
+    #aditi-logo-2 {
+        font-size: 13em;
+    }
+
+    img {
+        height: 28vh;
+        width: 19vw;
+    }
+
+    .nav-buttons {
+        left: 38%;
+    }
+}
+
+@media only screen and (min-width: 1200px) { 
+
+    #aditi-logo-2 {
+        font-size: 15em;
+    }
+
+}
+
+@media only screen and (min-width: 1300px) { 
+
+    #aditi-logo-2 {
+        font-size: 17em;
+    }
+
+}
+
+@media only screen and (min-width: 1400px) { 
+
+    #aditi-logo-2 {
+        font-size: 18em;
+    }
+
+}
+
+@media only screen and (min-width: 1500px) { 
+
+    #aditi-logo-2 {
+        font-size: 19em;
+    }
+}
+
+@media only screen and (min-width: 1600px) { 
+
+    #aditi-logo-2 {
+        font-size: 22em;
+    }
+}
+
+@media only screen and (min-width: 1700px) { 
+
+    #aditi-logo-2 {
+        font-size: 23em;
+    }
+}
+
+@media only screen and (min-width: 1800px) { 
+
+    #aditi-logo-2 {
+        font-size: 24em;
+    }
+}
+
+@media only screen and (min-width: 1900px) { 
+
+    #aditi-logo-2 {
+        font-size: 25em;
+    }
+}
+
+@media only screen and (min-width: 2000px) { 
+
+    #aditi-logo-2 {
+        font-size: 26em;
+    }
+}
+
+@media only screen and (min-width: 2100px) { 
+
+    #aditi-logo-2 {
+        font-size: 27em;
+    }
+}
+
+@media only screen and (min-width: 2200px) { 
+
+    #aditi-logo-2 {
+        font-size: 28em;
+    }
+}
+
+@media only screen and (min-width: 2300px) { 
+
+    #aditi-logo-2 {
+        font-size: 29em;
+    }
+}
+
+@media only screen and (min-width: 2400px) { 
+
+    #aditi-logo-2 {
+        font-size: 30em;
+    }
+}
+
+@media only screen and (min-width: 2500px) { 
+
+    #aditi-logo-2 {
+        font-size: 31em;
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "feelings": [ 
+                {"name": "Abandonment", "stats": 2},
+                {"name": "Adoration", "stats": 0},
+                {"name": "Amusement", "stats": 0},
+                {"name": "Anger", "stats": 0},
+                {"name": "Anxiety", "stats": 1},
+                {"name": "Awe", "stats": 1},
+                {"name":"Awkwardness", "stats": 0},
+                {"name": "Boredom", "stats": 0},
+                {"name": "Calmness", "stats" : 1},
+                {"name": "Confusion", "stats" : 0},
+                {"name": "Craving", "stats" : 0},
+                {"name": "Disgust", "stats" : 0},
+                {"name": "Empathetic pain", "stats" : 0},
+                {"name": "Excitement", "stats" : 0},
+                {"name": "Fear", "stats" : 0},
+                {"name": "Horror", "stats" : 0},
+                {"name": "Interest", "stats" : 0},
+                {"name": "Joy", "stats" : 0},
+                {"name": "Miscellaneous", "stats" : 1},
+                {"name": "Nostalgia", "stats" : 3},
+                {"name": "Regret", "stats" : 1},
+                {"name": "Relief", "stats" : 1},
+                {"name": "Romance", "stats" : 2},
+                {"name": "Sadness", "stats" : 4},
+                {"name": "Satisfaction", "stats" : 0},
+                {"name": "Sexual desire", "stats" : 0},
+                {"name": "Surprise", "stats" : 0}
+            ]
+}

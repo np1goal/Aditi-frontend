@@ -1,0 +1,48 @@
+<div class="document">
+    <mat-card id="confession-card">
+        <div id="close-button"><mat-icon id="close" (click)='closeConfessTextArea()'>clear</mat-icon></div>
+        <div id="feeling-button">
+            <div id="feeling-list">
+                <mat-form-field id="feeling-form-field" appearance="fill">
+                    <mat-label>Feeling</mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let feel of feelings" (click)=feelingsAdded(feel)>
+                        {{feel}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div id="feeling-selected">
+                <div id="feeling-selected-error">Only 3 Unique feelings can be selected </div>
+            </div>
+        </div>
+        <div id="confession-text">
+            <mat-form-field appearance="fill" id="confession-form-field">
+                <mat-label>Textarea</mat-label>
+                <textarea matInput rows=7 id="confession-text-area" [(ngModel)]="confessString" ></textarea>
+            </mat-form-field>
+        </div>
+        <div id="confession-submit-button"><button id="submit-button" mat-raised-button (click)='submitConfession()'>Submit</button></div>
+    </mat-card>
+    <div id="confessions">
+        <app-navigation-bar id="navigation-bar"></app-navigation-bar>
+        <div id="add-confessions">
+            <div id="confession-reason">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            <div id="confession-button"><button id="iconfess-button" mat-raised-button (click)="openConfessTextArea()">I Confess</button></div>
+        </div>
+        <div id="made-confessions">
+            <div *ngFor="let confession of confessions" >
+            <mat-card *ngIf = "confession.isApproved === true">
+                <div id="confessions-list">
+                    {{ confession.confession }}
+                </div>
+                <br>
+                <span id="emotions" *ngFor="let feel of confession.feelings">
+                    <span>|  {{ feel }}  |</span>
+                </span>
+            </mat-card>
+            <br>
+            </div>
+        </div>
+    </div>
+</div>

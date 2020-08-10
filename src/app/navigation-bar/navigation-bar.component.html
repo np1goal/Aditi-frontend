@@ -1,0 +1,14 @@
+<div id="navigation-bar">
+    <div id="logo" routerLink="">Aditi</div>
+    <div id="navigation-buttons">
+        <button class="nav-buttons" routerLink="/gallery" mat-button>Gallery</button>
+        <button class="nav-buttons" routerLink="/confessions" mat-button>Confessions</button>
+    </div>
+    <div id="mobile-navigation-buttons">
+        <button id="menu-button" mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+        <mat-menu #menu="matMenu">
+            <button class="nav-buttons-closed" routerLink="/gallery" mat-menu-item>Gallery</button>
+            <button class="nav-buttons-closed" routerLink="/confessions" mat-menu-item>Confessions</button>
+        </mat-menu>
+    </div>
+</div>
