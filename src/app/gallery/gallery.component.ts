@@ -1,16 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { COMMA, ENTER } from '@angular/cdk/keycodes';
+import { FormControl } from '@angular/forms';
+import { Observable } from 'rxjs';
+import Art from '../models/art';
+import { ArtService } from '../art.service';
 
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
-  styleUrls: ['./gallery.component.css']
+  styleUrls: ['./gallery.component.css', '../styling/colors.css']
 })
 export class GalleryComponent implements OnInit {
 
   drawingsArtTab = true;
   confessionsArtTab = false;
   allArtWidth = 0;
-
+  arts: Art[];
   drawingArtNames = [ "../assets/Drawings/05192019Aditi.jpg", 
                       "../assets/Drawings/06222018Aditi.jpg", 
                       "../assets/Drawings/06232018Aditi.jpg", 
@@ -31,10 +36,11 @@ export class GalleryComponent implements OnInit {
                       "../assets/Drawings/110920191Aditi.jpg"
                     ];
 
-  constructor() { }
+  constructor(private artService: ArtService) { }
 
   ngOnInit() {
-
+    this.artService.getArts()
+      .subscribe((arts: Art[]) => console.log(arts));
   }
 
   getArtInfo(art: String) {

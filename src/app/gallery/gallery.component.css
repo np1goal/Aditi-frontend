@@ -20,31 +20,32 @@
 }
 
 .toggle-button {
-    border: 1px solid #00214e;
-    margin-right: 10px;
-    /* padding: 10px 20px; */
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    -webkit-box-shadow: 0px 10px 17px -9px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 10px 17px -9px rgba(0,0,0,0.75);
-box-shadow: 0px 10px 17px -9px rgba(0,0,0,0.75);
+    /* border: 1px solid var(--color1); */
+    /* margin-right: 10px; */
+    border-radius: 0px;
+    padding: 5px 20px;
+    background-color: rgba(var(--color4rgb));
+    color: var(--color5);
+}
+
+#drawing-toggle-button {
+    background-color: rgba(var(--color4rgb), 0.4);
+    border-right: 1px solid var(--color3);
+}
+
+#confessions-toggle-button {
+    border-left: 1px solid var(--color3);
 }
 
 #arts {
     grid-area: arts;
     width: 100vw;
-    /* display: grid;
-    grid-template-columns: 5vw auto 5vw;
-    grid-template-areas: 'left-arrow all-art right-arrow' */
 }
 
 #left-arrow {
-    /* grid-area: left-arrow; */
-    /* float: right; */
     position: absolute;
     top: 50%;
     z-index: 97;
-    /* transform: translateY(25%); */
 }
 
 #all-art {
@@ -54,7 +55,6 @@ box-shadow: 0px 10px 17px -9px rgba(0,0,0,0.75);
 }
 
 #right-arrow {
-    /* grid-area: right-arrow; */
     position: absolute;
     top: 50%;
     z-index: 97;
@@ -64,10 +64,6 @@ box-shadow: 0px 10px 17px -9px rgba(0,0,0,0.75);
 #drawing-art, #confession-art {
     height: 90vh;
     width: 100%; 
-    /* grid-template-columns: auto auto auto auto;
-    grid-column-gap: 5%;
-    grid-row-gap: 10vh; */
-    
 }
 
 #drawing-art .slide {
@@ -137,6 +133,7 @@ box-shadow: 0px 10px 17px -9px rgba(0,0,0,0.75);
 
 #art-description-card {
     height: 55vh;
+    background-color: var(--color2);
     display: grid;
     grid-template-rows: 3vh auto;
     grid-template-areas:    'close'
@@ -183,7 +180,7 @@ box-shadow: 0px 10px 17px -9px rgba(0,0,0,0.75);
 #artist-name-heading {
     grid-area: artist-name-heading;
     font-size: 1.3em;
-    color: #023377;
+    color: var(--color5);
 }
 
 #artist-name {
@@ -194,7 +191,7 @@ box-shadow: 0px 10px 17px -9px rgba(0,0,0,0.75);
 #art-story-heading {
     grid-area: art-story-heading;
     font-size: 1.3em;
-    color: #023377;
+    color: var(--color5);
 }
 
 #artist-name::first-letter, #art-story::first-letter {
@@ -208,10 +205,6 @@ box-shadow: 0px 10px 17px -9px rgba(0,0,0,0.75);
 
 
 @media only screen and (max-width: 1000px) {
-
-    /* #drawing-art, #confession-art {
-        grid-template-columns: auto auto auto;
-    } */
 
     .design-art-card {
         height: 50vh;
@@ -267,7 +260,6 @@ box-shadow: 0px 10px 17px -9px rgba(0,0,0,0.75);
         grid-template-columns: auto;
         grid-column-gap: 5%;
         grid-row-gap: 10vh;
-        /* margin-left: 10vw;  */
         margin-right: 10vw;
         overflow: auto;
         white-space:nowrap; 
@@ -279,7 +271,6 @@ box-shadow: 0px 10px 17px -9px rgba(0,0,0,0.75);
     } 
 
     .display-image {
-        /* height: 60vh; */
         width: 60vw;
     }
     

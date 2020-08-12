@@ -22,7 +22,7 @@
 #confession-reason {
     grid-area: confession-reason;
     margin: auto 10%;
-    color: white;
+    color: var(--color5);
     font-size: 1.1em;
     font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
 }
@@ -39,6 +39,8 @@
 #iconfess-button {
     float: right;
     margin-right: 10%;
+    background-color: var(--color4);
+    color: var(--color5);
 }
 
 #confession-card {
@@ -50,7 +52,7 @@
     top: 20%;
     margin: auto;
     z-index: 1;
-    background-color: white;
+    background-color: var(--color1);
     -webkit-box-shadow: -1px 10px 23px 7px rgba(0,0,0,0.75);
     -moz-box-shadow: -1px 10px 23px 7px rgba(0,0,0,0.75);
     box-shadow: -1px 10px 23px 7px rgba(0,0,0,0.75);
@@ -132,7 +134,7 @@
 #confession-form-field {
     width: 100%;
     height: 100%;
-    background-color: white;
+    background-color: var(--color5);
 }
 
 #confession-submit-button {
@@ -141,8 +143,8 @@
 
 #submit-button {
     float: right;
-    background-color: #00214e;
-    color: #fff;
+    background-color: var(--color4);
+    color: var(--color5);
 }
 
 #made-confessions {
@@ -156,13 +158,13 @@
 }
 
 #confessions-list {
-    color: #fff;
+    color: var(--color5);
     font-size: 1.3em;
     font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
 }
 
 #emotions {
-    color: #00c3d1;
+    color: var(--color3); 
     font-size: 0.7em;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

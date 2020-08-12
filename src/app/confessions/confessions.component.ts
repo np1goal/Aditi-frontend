@@ -3,14 +3,13 @@ import  *  as  Feelings  from  '../data/feelings.json';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
-// import Feeling from 'src/app/models/feeling';
 import Confession from '../models/confession';
 import { ConfessionService } from '../confession.service';
 
 @Component({
   selector: 'app-confessions',
   templateUrl: './confessions.component.html',
-  styleUrls: ['./confessions.component.css']
+  styleUrls: ['./confessions.component.css', '../styling/colors.css']
 })
 export class ConfessionsComponent implements OnInit {
   

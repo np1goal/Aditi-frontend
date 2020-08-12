@@ -1,247 +1,147 @@
+#home-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: home-loading-animation 1s 5s forwards ;
+    z-index: 3;
+}
+
+@keyframes home-loading-animation {
+    /* 10% { transform:  translateY(-100vh); } */
+    100%{ transform: scale(0); }
+}
+
 #home-document {
+    background-image: url('../../assets/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
     min-height: 100vh;
     width: 100vw;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
+
+#home-document-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(163, 206, 241, 0.5);
+    /* opacity: 0.5; */
+    z-index: 1;
+}
+
+#home-document-container {
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background-color: transparent;
     display: grid;
-    grid-template-rows: 10vh 10vh 10vh 30vh 10vh 10vh auto;
+    grid-template-columns: auto;
+    grid-template-rows: auto 10vh 20vh 2vh 5vh 3vh 10vh 20vh;
     grid-template-areas:    '.'
                             'welcome-text'
+                            'aditi-text'
                             '.'
-                            'logo'
+                            'tag-text'
                             '.'
-                            'buttons';
-    background: url('../../assets/background.png');
-    background-repeat: no-repeat;
-    background-size: 100vw 100vh;
+                            'buttons'
+                            '.';
+}
+
+.intro-text {
+    color: transparent;
+    display: flex;
+    align-items: center;
 }
 
 #welcome-text {
-    grid-area: welcome-text;
-    text-align: center;
-    font-size: 5em;
+    grid-area: welcome-text; 
+    font-size: 3em;
+    margin-left: 11vw;
+    animation: welcome-text-animation 1s 6s forwards;
 }
 
-#logo {
-    grid-area: logo;
-    display: grid;
-    grid-template-columns: 43% auto;
-    grid-template-areas: 'aditi-logo-1 aditi-logo-2';
-    color: #000000;
+#aditi-text {
+    grid-area: aditi-text;
+    font-size: 10em;
+    margin-left: 10vw;
+    animation: aditi-text-animation 1s 6s forwards;
 }
 
-#aditi-logo-1 {
-    position: relative;
-    grid-area: aditi-logo-1;
-    text-align: right;
-    animation: aditi-logo-1-animation 1s forwards;
-}
-
-img {
-    height: 30vh;
-    width: 17vw;
-}
-
-@-webkit-keyframes aditi-logo-1-animation {
-    0% {
-        transform: translateX(-50vw);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-#aditi-logo-2 {
-    grid-area: aditi-logo-2;
-    font-size: 14em;
-    animation: aditi-logo-2-animation 1s forwards;
-}
-
-@-webkit-keyframes aditi-logo-2-animation {
-    0% {
-        transform: translateX(50vw);
-    }
-    100% {
-        transform: translateX(0);
-    }
+#tag-text {
+    grid-area: tag-text;
+    font-size: 2em;
+    margin-left: 11vw;
+    animation: welcome-text-animation 1s 6s forwards;
 }
 
 #buttons {
     grid-area: buttons;
+    margin-left: 11vw;
 }
 
 .nav-buttons {
-    left: 40%;
-    color: #fff;
-    font-size: 1em;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 2px solid #00214e;
     margin-right: 2vw;
-    padding: 1vw 2vw;
-    -webkit-box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.75);
-    box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.75);
+    padding: 1vh 1vw;
+    animation: buttons-animation 1s 6s forwards;
 }
 
-@media only screen and (max-width: 650px) { 
+@-webkit-keyframes welcome-text-animation {
+    0% { transform: translateY(-5vh); }
+    100% { transform: translateY(0vh); color: #000;}
+}
 
-    #home-document {
-        grid-template-rows: 5vh 5vh 5vh 30vh 5vh 5vh auto;
+@-webkit-keyframes aditi-text-animation {
+    0% { transform: translateY(-5vh); }
+    100% { transform: translateY(0vh); color: #274C77;}
+}
+
+@-webkit-keyframes buttons-animation {
+    0% { transform: translateY(-5vh); }
+    100% { 
+        transform: translateY(0vh);
+        background-color: #274C77;
+        color: #fff;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .intro-text {
+        display: block;
+        text-align: center;
     }
 
     #welcome-text {
-        font-size: 2em;
+        margin-left: 0vw;
+    }
+    
+    #aditi-text {
+        margin-left: 0vw;
     }
 
-    #logo {
-        grid-template-columns: 10% auto;
+    #tag-text {
+        margin-left: 0vw;
     }
-
-    #aditi-logo-2 {
-        font-size: 7em;
-    }
-
-    img {
-        height: 20vh;
-        width: 23vw;
-    }
-
-    .nav-buttons {
-        left: 15%;
-    }
-}
-
-@media only screen and (max-width: 750px) { 
-
-    #logo {
-        grid-template-columns: 40% auto;
-    }
-
-    #aditi-logo-2 {
-        font-size: 13em;
-    }
-
-    img {
-        height: 28vh;
-        width: 19vw;
+    
+    #buttons {
+        margin-left: 0vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
 
     .nav-buttons {
-        left: 37%;
-    }
-}
-
-@media only screen and (max-width: 800px) { 
-
-    #aditi-logo-2 {
-        font-size: 13em;
+        margin-right: 0vw;
     }
 
-    img {
-        height: 28vh;
-        width: 19vw;
+    #gallery-button {
+        margin-right: 1vw;
     }
 
-    .nav-buttons {
-        left: 38%;
-    }
-}
-
-@media only screen and (min-width: 1200px) { 
-
-    #aditi-logo-2 {
-        font-size: 15em;
-    }
-
-}
-
-@media only screen and (min-width: 1300px) { 
-
-    #aditi-logo-2 {
-        font-size: 17em;
-    }
-
-}
-
-@media only screen and (min-width: 1400px) { 
-
-    #aditi-logo-2 {
-        font-size: 18em;
-    }
-
-}
-
-@media only screen and (min-width: 1500px) { 
-
-    #aditi-logo-2 {
-        font-size: 19em;
-    }
-}
-
-@media only screen and (min-width: 1600px) { 
-
-    #aditi-logo-2 {
-        font-size: 22em;
-    }
-}
-
-@media only screen and (min-width: 1700px) { 
-
-    #aditi-logo-2 {
-        font-size: 23em;
-    }
-}
-
-@media only screen and (min-width: 1800px) { 
-
-    #aditi-logo-2 {
-        font-size: 24em;
-    }
-}
-
-@media only screen and (min-width: 1900px) { 
-
-    #aditi-logo-2 {
-        font-size: 25em;
-    }
-}
-
-@media only screen and (min-width: 2000px) { 
-
-    #aditi-logo-2 {
-        font-size: 26em;
-    }
-}
-
-@media only screen and (min-width: 2100px) { 
-
-    #aditi-logo-2 {
-        font-size: 27em;
-    }
-}
-
-@media only screen and (min-width: 2200px) { 
-
-    #aditi-logo-2 {
-        font-size: 28em;
-    }
-}
-
-@media only screen and (min-width: 2300px) { 
-
-    #aditi-logo-2 {
-        font-size: 29em;
-    }
-}
-
-@media only screen and (min-width: 2400px) { 
-
-    #aditi-logo-2 {
-        font-size: 30em;
-    }
-}
-
-@media only screen and (min-width: 2500px) { 
-
-    #aditi-logo-2 {
-        font-size: 31em;
+    #confessions-button {
+        margin-left: 1vw;
     }
 }

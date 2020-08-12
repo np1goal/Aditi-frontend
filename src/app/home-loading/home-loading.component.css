@@ -1,0 +1,29 @@
+#home-loading-document {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loading-container {
+    height: 50vh;
+    width: 45vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Web_1920_1 {
+    height: 100%;
+    width: 100%;
+    stroke-dasharray: 20000;
+    stroke-dashoffset: 20000;
+    /* fill: transparent; */
+    animation: animation2-text-animation 5s 0.5s linear forwards;
+}
+
+@keyframes animation2-text-animation {
+    0% { stroke-dashoffset: 20000; fill: transparent;}
+    80% { stroke-dashoffset: 0; fill: #000;}
+}

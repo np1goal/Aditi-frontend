@@ -13,11 +13,13 @@ import { MatSelectModule } from '@angular/material/select';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeLoadingComponent } from './home-loading/home-loading.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents
+    routingComponents,
+    HomeLoadingComponent
   ],
   imports: [
     BrowserModule,

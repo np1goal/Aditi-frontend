@@ -1,0 +1,15 @@
+.document {
+    /* --color1: #31708e;
+    --color2: #8fc1e3;
+    --color3: #5085a5;
+    --color4: #687864;
+    --color4rgb: 104, 120, 100;
+    --color5: #f7f9fb; //text color */
+
+    --color1: #274C77; /* Background Color */
+    --color2: #A3CEF1; /* Secondary Background Color */
+    --color3: #13d8b7; /* Secondary Text Color */
+    --color4: #009c9c; /* Button Color */
+    --color4rgb: 0, 156, 156;
+    --color5: #f7f9fb; /* Text Color */
+}

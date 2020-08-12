@@ -11,11 +11,16 @@
 
 #logo {
     grid-area: logo;
-    color: #00c3d1;
+    color: var(--color2);
     font-size: 2.8em;
     margin: auto;
     font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
     cursor: pointer;
+}
+
+#logo-img {
+    width: 50px;
+    height: 50px;
 }
 
 #navigation-buttons {
@@ -33,7 +38,7 @@
 }
 
 #menu-button {
-    color: #fff;
+    color: var(--color5);
     font-size: 5em;
     transform: scale(1.5);
     margin: auto;
@@ -42,12 +47,12 @@
 
 .nav-buttons {
     background-color: transparent;
-    color: #fff;
+    color: var(--color5);
 }
 
 .nav-buttons-closed {
     background-color: transparent;
-    color: #00214e;
+    color: var(--color1);
 }
 
 @media only screen and (max-width: 750px) {
