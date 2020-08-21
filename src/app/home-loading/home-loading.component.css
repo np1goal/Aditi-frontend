@@ -14,16 +14,18 @@
     align-items: center;
 }
 
-#Web_1920_1 {
-    height: 100%;
-    width: 100%;
-    stroke-dasharray: 20000;
-    stroke-dashoffset: 20000;
-    /* fill: transparent; */
+#Aditi_Logo {
+    height: 400px;
+    width: 400px;
+    opacity: 0;
+    /* stroke-dasharray: 20000;
+    stroke-dashoffset: 20000; */
+    fill: transparent;
     animation: animation2-text-animation 5s 0.5s linear forwards;
 }
 
 @keyframes animation2-text-animation {
-    0% { stroke-dashoffset: 20000; fill: transparent;}
-    80% { stroke-dashoffset: 0; fill: #000;}
+    /* 0% { stroke-dashoffset: 20000; fill: transparent;} */
+    50% { opacity: 1; fill: black;}
+    100% { opacity: 1; fill: black; }
 }

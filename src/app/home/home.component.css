@@ -27,7 +27,8 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgb(163, 206, 241, 0.5);
+    background-color: rgb(0, 88, 139, 0.35);
+    /* background-color: rgb(163, 206, 241, 0.5); */
     /* opacity: 0.5; */
     z-index: 1;
 }
@@ -95,14 +96,14 @@
 
 @-webkit-keyframes aditi-text-animation {
     0% { transform: translateY(-5vh); }
-    100% { transform: translateY(0vh); color: #274C77;}
+    100% { transform: translateY(0vh); color: #2a2a72;}
 }
 
 @-webkit-keyframes buttons-animation {
     0% { transform: translateY(-5vh); }
     100% { 
         transform: translateY(0vh);
-        background-color: #274C77;
+        background-color: #2a2a72;
         color: #fff;
     }
 }

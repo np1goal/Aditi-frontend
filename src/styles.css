@@ -4,8 +4,9 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Arial, Helvetica, sans-serif }
 
 .document {
-    background-color: #0b3c5d;
-    background-image: linear-gradient(180deg, #274C77 0%, #A3CEF1 150%);
+    background-color: #2a2a72;
+    background-image: linear-gradient(315deg, #2a2a72 0%, #00588b 74%);
+    /* color: #00588b; */
     min-height: 100vh;
     width: 100vw;
     font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
