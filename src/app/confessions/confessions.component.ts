@@ -46,7 +46,7 @@ export class ConfessionsComponent implements OnInit {
       feel.style.display = 'inline';
       feel.style.width = '100px';
       feel.style.height = '30px';
-      feel.style.border = '2px solid #00214e';
+      feel.style.border = '2px solid #59b1b8';
       feel.style.backgroundColor = 'transparent';
       feel.style.borderRadius = '10px';
       feel.style.padding = '5px';
