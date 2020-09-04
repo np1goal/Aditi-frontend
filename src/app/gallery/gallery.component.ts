@@ -46,18 +46,28 @@ export class GalleryComponent implements OnInit {
       .subscribe((arts: Art[]) => console.log(arts));
   }
 
-  getArtInfo(art: String) {
+  getArtInfo(art: String, isConfessionArt: Boolean) {
     var artDescription = document.getElementById('art-description');
     var image = document.getElementById('image-art-description');
     var drawingArt = document.getElementById('drawing-art');
     var confessionArt = document.getElementById('confession-art');
-
-    artDescription.style.display = 'block'; 
-    artDescription.style.animation = 'art-description-entry-animation 0.3s forwards ease-in';
-    drawingArt.style.opacity = '0.3'; 
-    confessionArt.style.opacity = '0.3'; 
-    image.setAttribute('src',art.toString());
-    var artSplit = art.split("/");
+    
+    if (isConfessionArt == false) {
+      artDescription.style.display = 'block'; 
+      artDescription.style.animation = 'art-description-entry-animation 0.3s forwards ease-in';
+      drawingArt.style.opacity = '0.3'; 
+      image.setAttribute('src',art.toString());
+      var artSplit = art.split("/");
+    } else {
+      artDescription.style.display = 'block'; 
+      artDescription.style.animation = 'art-description-entry-animation 0.3s forwards ease-in';
+      confessionArt.style.opacity = '0.3'; 
+      document.getElementById('art-story-heading').textContent = 'Confession: ';
+      document.getElementById('art-story').textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+      document.getElementById('art-story').style.fontFamily = 'fantasy';
+      image.setAttribute('src',art.toString());
+      var artSplit = art.split("/");
+    }
   }
 
   displayDrawings() {

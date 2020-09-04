@@ -30,14 +30,14 @@
             <div id="all-art">
                 <div id="drawing-art">
                     <div class="slide" *ngFor="let drawingArt of drawingArtNames">
-                        <mat-card class="design-art-card"  (click)="getArtInfo(drawingArt)">
+                        <mat-card class="design-art-card"  (click)="getArtInfo(drawingArt, false)">
                             <img class="display-image" [attr.src]="drawingArt">
                         </mat-card>
                     </div> 
                 </div>
                 <div id="confession-art">
                     <div class="slide" *ngFor="let confessionArt of confessionArtNames">
-                        <mat-card class="design-art-card"  (click)="getArtInfo(confessionArt)">
+                        <mat-card class="design-art-card"  (click)="getArtInfo(confessionArt, true)">
                             <img class="display-image" [attr.src]="confessionArt">
                         </mat-card>
                     </div> 
