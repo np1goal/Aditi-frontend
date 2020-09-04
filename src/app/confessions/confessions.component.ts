@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as AOS from 'aos';
 import  *  as  Feelings  from  '../data/feelings.json';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { FormControl } from '@angular/forms';
@@ -21,6 +22,7 @@ export class ConfessionsComponent implements OnInit {
   constructor(private confessionService: ConfessionService) { }
 
   ngOnInit() {
+    AOS.init();
     for(var i = 0; i < Feelings["feelings"].length; i++) {
       this.feelings.push(Feelings["feelings"][i].name);
     }

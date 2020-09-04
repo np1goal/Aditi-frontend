@@ -1,5 +1,5 @@
 #navigation-bar {
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(var(--color2rgb) ,0.6);
     position: fixed;
     display: grid;
     width: 100vw;

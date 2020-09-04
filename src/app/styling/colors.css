@@ -6,10 +6,20 @@
     --color4rgb: 104, 120, 100;
     --color5: #f7f9fb; //text color */
 
-    --color1: #2a2a72; /* Background Color */
-    --color2: #00588b; /* Secondary Background Color */
-    --color3: #0ca78d; /* Secondary Text Color */
-    --color4: #00c7c7; /* Button Color */
+    /* --color1: #2a2a72; Background Color
+    --color2: #00588b; Secondary Background Color
+    --color3: #0ca78d; Secondary Text Color
+    --color4: #00c7c7; Button Color
     --color4rgb: 0, 156, 156;
-    --color5: #f7f9fb; /* Text Color */
+    --color5: #f7f9fb; Text Color */
+
+    --color1: #ebfcff; /* Background Color */
+    --color2: #97d6e4; /* Secondary Background Color */
+    --color2rgb: 151, 214, 228; 
+    --color3: #a7e9ba; /* Secondary Text Color */
+    --color4: #59b1b8; /* Button Color */
+    --color4rgb: 89, 177, 184;
+    --color5: #3a8c94; /* Text Color */
+    --color6: #64aab1; /* Tertiary Text Color */
+    --color7: #ffffff; /* Button Text Color */
 }

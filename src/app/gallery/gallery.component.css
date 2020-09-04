@@ -23,16 +23,17 @@
     border-radius: 0px;
     padding: 5px 20px;
     background-color: rgba(var(--color4rgb));
-    color: var(--color5);
+    color: var(--color7);
 }
 
 #drawing-toggle-button {
     background-color: rgba(var(--color4rgb), 0.4);
-    border-right: 1px solid var(--color3);
+    color: var(--color5);
+    border-right: 1px solid var(--color5);
 }
 
 #confessions-toggle-button {
-    border-left: 1px solid var(--color3);
+    border-left: 1px solid var(--color5);
 }
 
 #arts {
@@ -42,7 +43,7 @@
 
 #left-arrow {
     position: absolute;
-    top: 55%;
+    top: 25%;
     z-index: 97;
 }
 
@@ -56,7 +57,7 @@
 #right-arrow {
     position: absolute;
     right: 0vw;
-    top: 55%;
+    top: 25%;
     z-index: 97;
 }
 
@@ -84,9 +85,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    -webkit-box-shadow: -1px 10px 23px 5px rgba(0,0,0,0.75);
-    -moz-box-shadow: -1px 10px 23px 5px rgba(0,0,0,0.75);
-    box-shadow: -1px 10px 23px 5px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 8px 17px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 8px 17px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 8px 17px 0px rgba(0,0,0,0.75);
 }
 
 .display-image {
@@ -133,7 +134,7 @@
 
 #art-description-card {
     height: 55vh;
-    background-color: var(--color2);
+    background-color: var(--color1);
     display: grid;
     grid-template-rows: 3vh auto;
     grid-template-areas:    'close'
