@@ -3,7 +3,7 @@
     display: grid;
     overflow-y: hidden;
     overflow-x: hidden;
-    grid-template-rows: 10vh 10vh auto;
+    grid-template-rows: 10vh 15vh auto;
     grid-template-areas:    'navigation-bar'
                             'toggle-bar'
                             'arts'
@@ -20,8 +20,6 @@
 }
 
 .toggle-button {
-    /* border: 1px solid var(--color1); */
-    /* margin-right: 10px; */
     border-radius: 0px;
     padding: 5px 20px;
     background-color: rgba(var(--color4rgb));
@@ -44,7 +42,7 @@
 
 #left-arrow {
     position: absolute;
-    top: 50%;
+    top: 55%;
     z-index: 97;
 }
 
@@ -52,17 +50,18 @@
     grid-area: all-art;
     overflow: auto;
     white-space:nowrap; 
+    padding-left: 5vw;
 }
 
 #right-arrow {
     position: absolute;
-    top: 50%;
-    z-index: 97;
     right: 0vw;
+    top: 55%;
+    z-index: 97;
 }
 
 #drawing-art, #confession-art {
-    height: 90vh;
+    height: 75vh;
     width: 100%; 
 }
 
@@ -77,21 +76,22 @@
 .design-art-card {
     text-align: center;
     background-color: transparent;
-    width: 25vw;
-    top: 5%;
-    left: 1%;
+    width: 340px;
     margin-top: 2vh;
     margin-bottom: 2vh;
     margin-right: 1.5vw;
     margin-left: 1.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     -webkit-box-shadow: -1px 10px 23px 5px rgba(0,0,0,0.75);
     -moz-box-shadow: -1px 10px 23px 5px rgba(0,0,0,0.75);
     box-shadow: -1px 10px 23px 5px rgba(0,0,0,0.75);
 }
 
 .display-image {
-    height: 55vh;
-    width: 25vw;
+    height: 450px;
+    width: 340px;
 }
 
 #art-description {
@@ -206,15 +206,15 @@
 
 @media only screen and (max-width: 1000px) {
 
-    .design-art-card {
+    /* .design-art-card {
         height: 50vh;
         width: 35vw;
-    }
+    } */
 
-    .display-image {
+    /* .display-image {
         height: 50vh;
         width: 35vw;
-    }
+    } */
 
     #card-info {
         grid-template-columns: 40% 2% auto;
@@ -222,22 +222,12 @@
 }
 
 @media only screen and (max-width: 850px) {
-
     #card-info {
         grid-template-columns: 45% 2% auto;
     }  
 }
 
 @media only screen and (max-width: 750px) {
-
-    .design-art-card {
-        width: 45vw;
-    } 
-
-    .display-image {
-        width: 45vw;
-    } 
-
     #art-description-card {
         height: 60vh;
     }
@@ -248,6 +238,13 @@
 }
 
 @media only screen and (max-width: 650px) {
+    #arts {
+        padding-top: 0;
+    }
+
+    #all-art {
+        padding-left: 0vw;
+    }
 
     #left-arrow, #right-arrow {
         display: none;
@@ -256,23 +253,19 @@
     #drawing-art, #confession-art {
         height: 60vh;
         width: 100%; 
+        padding-top: 3vh;
         display: grid;
         grid-template-columns: auto;
-        grid-column-gap: 5%;
-        grid-row-gap: 10vh;
-        margin-right: 10vw;
+        grid-column-gap: 0%;
+        grid-row-gap: 5vh;
+        margin-right: 0vw;
         overflow: auto;
         white-space:nowrap; 
     }
 
     .design-art-card {
-        width: 60vw;
         margin: auto;
     } 
-
-    .display-image {
-        width: 60vw;
-    }
     
     #art-image {
         display: none;
@@ -282,5 +275,68 @@
         display: grid;
         grid-template-columns: auto;
         grid-template-areas: 'art-info'
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .design-art-card {
+        width: 70%;
+    }
+    
+    .display-image {
+        height: 410px;
+        width: 100%;
+    }
+    
+}
+
+@media only screen and (max-width: 400px) {
+    .display-image {
+        height: 390px;
+    }
+    
+}
+
+@media only screen and (max-width: 350px) {
+    .design-art-card {
+        width: 80%;
+    }
+
+    .display-image {
+        height: 370px;
+    }
+    
+}
+
+@media only screen and (max-width: 300px) {
+    .display-image {
+        height: 350px;
+    }
+    
+}
+
+@media only screen and (max-width: 250px) {
+    .display-image {
+        height: 310px;
+    }
+}
+
+@media only screen and (max-width: 200px) {
+    .design-art-card {
+        width: 70%;
+    }
+
+    .display-image {
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 150px) {
+    .design-art-card {
+        width: 70%;
+    }
+
+    .display-image {
+        height: 170px;
     }
 }
