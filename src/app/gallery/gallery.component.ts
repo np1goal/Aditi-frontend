@@ -35,6 +35,9 @@ export class GalleryComponent implements OnInit {
                       "../assets/Drawings/12262019Aditi.jpg", 
                       "../assets/Drawings/110920191Aditi.jpg"
                     ];
+  confessionArtNames = [ "../assets/Confessions/ifiknew.jpg", 
+                         "../assets/Confessions/forgiving.jpg"
+                        ]; 
 
   constructor(private artService: ArtService) { }
 
@@ -48,8 +51,6 @@ export class GalleryComponent implements OnInit {
     var image = document.getElementById('image-art-description');
     var drawingArt = document.getElementById('drawing-art');
     var confessionArt = document.getElementById('confession-art');
-    
-    
 
     artDescription.style.display = 'block'; 
     artDescription.style.animation = 'art-description-entry-animation 0.3s forwards ease-in';
@@ -59,12 +60,31 @@ export class GalleryComponent implements OnInit {
     var artSplit = art.split("/");
   }
 
+  displayDrawings() {
+    document.getElementById('drawing-toggle-button').style.color = 'var(--color5)';
+    document.getElementById('drawing-toggle-button').style.backgroundColor = 'rgba(var(--color4rgb), 0.4)';
+    document.getElementById('drawing-art').style.display = 'block';
+    document.getElementById('confessions-toggle-button').style.color = 'var(--color7)';
+    document.getElementById('confessions-toggle-button').style.backgroundColor = 'rgba(var(--color4rgb))';
+    document.getElementById('confession-art').style.display = 'none';
+  }
+
+  displayConfessions() {
+    document.getElementById('confessions-toggle-button').style.color = 'var(--color5)';
+    document.getElementById('confessions-toggle-button').style.backgroundColor = 'rgba(var(--color4rgb), 0.4)';
+    document.getElementById('confession-art').style.display = 'block';
+    document.getElementById('drawing-toggle-button').style.color = 'var(--color7)';
+    document.getElementById('drawing-toggle-button').style.backgroundColor = 'rgba(var(--color4rgb))';
+    document.getElementById('drawing-art').style.display = 'none';
+  }
+
   closeArtDescription() {
     var artDescription = document.getElementById('art-description');
     var drawingArt = document.getElementById('drawing-art');
     var confessionArt = document.getElementById('confession-art');
 
     artDescription.style.animation = 'art-description-exit-animation 0.3s forwards ease-out'
+    setTimeout(function() {artDescription.style.display = 'none';}, 300);
     drawingArt.style.opacity = '1';  
     confessionArt.style.opacity = '1';    
   }

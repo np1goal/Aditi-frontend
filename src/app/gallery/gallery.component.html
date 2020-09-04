@@ -2,8 +2,8 @@
     <div id="gallery">
         <app-navigation-bar id="navigation-bar"></app-navigation-bar>
         <div id="toggle-bar">
-            <button class="toggle-button" mat-raised-button id="drawing-toggle-button">Drawings</button>
-            <button class="toggle-button" mat-raised-button id="confessions-toggle-button">Confessions</button>
+            <button class="toggle-button" mat-raised-button id="drawing-toggle-button" (click)="displayDrawings()">Drawings</button>
+            <button class="toggle-button" mat-raised-button id="confessions-toggle-button" (click)="displayConfessions()">Confessions</button>
         </div>
         <div id="arts">
             <br><br>
@@ -36,6 +36,11 @@
                     </div> 
                 </div>
                 <div id="confession-art">
+                    <div class="slide" *ngFor="let confessionArt of confessionArtNames">
+                        <mat-card class="design-art-card"  (click)="getArtInfo(confessionArt)">
+                            <img class="display-image" [attr.src]="confessionArt">
+                        </mat-card>
+                    </div> 
                 </div>
             </div>
         </div>
