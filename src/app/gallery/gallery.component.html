@@ -25,8 +25,8 @@
                     </div>
                 </mat-card>
             </div>
-            <div id="left-arrow" (click)='leftArrow()'><img class="arrow" src="../../assets/left-arrow.png"></div>
-            <div id="right-arrow" (click)='rightArrow()'><img class="arrow" src="../../assets/right-arrow.png"></div>
+            <div id="left-arrow" (mouseover)='leftArrow()' (click)='leftArrow()'><img class="arrow" src="../../assets/left-arrow.png"></div>
+            <div id="right-arrow" (mouseover)='rightArrow()' (click)='rightArrow()'><img class="arrow" src="../../assets/right-arrow.png"></div>
             <div id="all-art">
                 <div id="drawing-art">
                     <div class="slide" *ngFor="let drawingArt of drawingArtNames">
