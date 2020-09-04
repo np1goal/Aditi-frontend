@@ -14,8 +14,7 @@ export class HomeComponent implements OnInit {
 
   ngAfterViewInit(){
     setTimeout( ()=>{
-    // document.getElementById('aditi-logo-1').style.opacity = '0.1';
-    // document.getElementById('aditi-logo-2').style.opacity = '0.1';
-    }, 3000)
+    document.getElementById('home-loading').style.display = 'none';
+    }, 6500)
   }
 }

@@ -12,20 +12,39 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transform-style: preserve-3d;
 }
 
 #Aditi_Logo {
-    height: 400px;
+    height: 500px;
     width: 400px;
-    opacity: 0;
+    /* opacity: 0; */
+    /* transform: translateZ(-500px); */
     /* stroke-dasharray: 20000;
     stroke-dashoffset: 20000; */
-    fill: transparent;
-    animation: animation2-text-animation 5s 0.5s linear forwards;
+    /* animation: animation2-text-animation 5s 0.5s linear forwards both; */
 }
 
-@keyframes animation2-text-animation {
+#a-flaps, #a-solid {
+    fill: transparent;
+    stroke-dasharray: 3000;
+    stroke-dashoffset: 3000;
+    animation: letter-animation 2s 0.1s linear forwards;
+}
+
+.inner-design {
+    opacity: 0;
+    animation: design-animation 2s 2s linear forwards;
+}
+
+@keyframes letter-animation {
+    100% { stroke-dashoffset: 0; fill: #000;}
+    /* 50% { opacity: 1; fill: black;}
+    100% { opacity: 1; fill: black; } */
+}
+
+@keyframes design-animation {
     /* 0% { stroke-dashoffset: 20000; fill: transparent;} */
-    50% { opacity: 1; fill: black;}
-    100% { opacity: 1; fill: black; }
+    /* 50% { opacity: 1; fill: black;}*/
+    100% { opacity: 1;} 
 }
