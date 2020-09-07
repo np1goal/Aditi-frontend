@@ -43,7 +43,7 @@ export class GalleryComponent implements OnInit {
 
   ngOnInit() {
     this.artService.getArts()
-      .subscribe((arts: Art[]) => console.log(arts));
+      .subscribe((arts: Art[]) => {this.arts = arts; console.log(this.arts);});
   }
 
   getArtInfo(art: String, isConfessionArt: Boolean) {
@@ -51,29 +51,50 @@ export class GalleryComponent implements OnInit {
     var image = document.getElementById('image-art-description');
     var drawingArt = document.getElementById('drawing-art');
     var confessionArt = document.getElementById('confession-art');
+    var artistName = document.getElementById('artist-name');
+    var artStory = document.getElementById('art-story');
     
     if (isConfessionArt == false) {
+      var artSplit = art.split("/");
+      for(var i = 0; i < this.arts.length; i++) {
+        if(this.arts[i].artNames.includes(artSplit[3])) {
+          artistName.textContent = this.arts[i].artistName;
+          if(this.arts[i].artStory.length != 0) {
+            artStory.textContent = this.arts[i].artStory;
+          } else {
+            artStory.textContent = "No Story provided from Artist";
+          }
+        }
+      }
+      image.setAttribute('src',art.toString());
       artDescription.style.display = 'block'; 
       artDescription.style.animation = 'art-description-entry-animation 0.3s forwards ease-in';
       drawingArt.style.opacity = '0.3'; 
-      image.setAttribute('src',art.toString());
-      var artSplit = art.split("/");
     } else {
+      var artSplit = art.split("/");
+      for(var i = 0; i < this.arts.length; i++) {
+        if(this.arts[i].artNames.includes(artSplit[3])) {
+          artistName.textContent = this.arts[i].artistName;
+          artStory.textContent = this.arts[i].artConfession;
+        }
+      }
       artDescription.style.display = 'block'; 
       artDescription.style.animation = 'art-description-entry-animation 0.3s forwards ease-in';
       confessionArt.style.opacity = '0.3'; 
       document.getElementById('art-story-heading').textContent = 'Confession: ';
-      document.getElementById('art-story').textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
-      document.getElementById('art-story').style.fontFamily = 'fantasy';
+      document.getElementById('art-story').style.fontFamily = '\'Handlee\', cursive';
       image.setAttribute('src',art.toString());
-      var artSplit = art.split("/");
     }
   }
 
   displayDrawings() {
     document.getElementById('drawing-toggle-button').style.color = 'var(--color5)';
     document.getElementById('drawing-toggle-button').style.backgroundColor = 'rgba(var(--color4rgb), 0.4)';
-    document.getElementById('drawing-art').style.display = 'block';
+    if(window.innerWidth <= 650) {
+      document.getElementById('drawing-art').style.display = 'grid';
+    } else {
+      document.getElementById('drawing-art').style.display = 'block';
+    }
     document.getElementById('confessions-toggle-button').style.color = 'var(--color7)';
     document.getElementById('confessions-toggle-button').style.backgroundColor = 'rgba(var(--color4rgb))';
     document.getElementById('confession-art').style.display = 'none';
@@ -82,7 +103,11 @@ export class GalleryComponent implements OnInit {
   displayConfessions() {
     document.getElementById('confessions-toggle-button').style.color = 'var(--color5)';
     document.getElementById('confessions-toggle-button').style.backgroundColor = 'rgba(var(--color4rgb), 0.4)';
-    document.getElementById('confession-art').style.display = 'block';
+    if(window.innerWidth <= 650) {
+      document.getElementById('confession-art').style.display = 'grid';
+    } else  {
+      document.getElementById('confession-art').style.display = 'block';
+    }
     document.getElementById('drawing-toggle-button').style.color = 'var(--color7)';
     document.getElementById('drawing-toggle-button').style.backgroundColor = 'rgba(var(--color4rgb))';
     document.getElementById('drawing-art').style.display = 'none';

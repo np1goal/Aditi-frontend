@@ -1,0 +1,53 @@
+#footer {
+    background-color: transparent;
+    height: 5vh;
+    width: 100%;
+    text-align: center;
+    /* display: grid;
+    grid-template-rows: 60% 20% 20%;
+    grid-template-areas:    '.'
+                            'contact'
+                            'social-media'; */
+}
+
+#contact {
+    grid-area: contact;
+    margin-top: 2vh;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+}
+
+.line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: var(--color5);
+}
+
+#contact-text {
+    flex-grow: 0;
+    color: var(--color5);
+}
+
+#social-media {
+    grid-area: social-media;
+    color: var(--color4);
+    margin-top: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#facebook {
+    margin-top: 3px;
+}
+
+#instagram {
+    font-size: 1.4em;
+}

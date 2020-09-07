@@ -1,5 +1,5 @@
 #confessions-document {
-    opacity: 0;
+    opacity: 0.5;
     animation: confessions-document-animation 0.5s ease-in forwards;
 }
 
@@ -9,11 +9,12 @@
 
 #confessions {
     display: grid;
-    grid-template-rows: 10vh 25vh 5vh auto;
+    grid-template-rows: 10vh 25vh 5vh auto 7vh;
     grid-template-areas:    'navigation-bar'
                             'add-confessions'
                             '.'
-                            'made-confessions';
+                            'made-confessions'
+                            'footer';
 }
 
 #navigation-bar {
@@ -176,6 +177,10 @@
     color: var(--color3); 
     font-size: 0.7em;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#footer {
+    grid-area: footer;
 }
 
 @media only screen and (max-width: 850px) {

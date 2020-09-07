@@ -14,12 +14,14 @@ import { MatSelectModule } from '@angular/material/select';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeLoadingComponent } from './home-loading/home-loading.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
-    HomeLoadingComponent
+    HomeLoadingComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
