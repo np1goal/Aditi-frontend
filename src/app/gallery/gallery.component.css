@@ -207,16 +207,9 @@
 }
 
 #footer {
+    padding-top: 3vh;
     grid-area: footer;
     z-index: 99;
-}
-
-@media only screen and (max-width: 1000px) {
-
-}
-
-@media only screen and (max-width: 850px) {
-
 }
 
 @media only screen and (max-width: 750px) {

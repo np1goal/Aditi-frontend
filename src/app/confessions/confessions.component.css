@@ -9,7 +9,7 @@
 
 #confessions {
     display: grid;
-    grid-template-rows: 10vh 25vh 5vh auto 7vh;
+    grid-template-rows: 10vh 30vh 5vh auto 10vh;
     grid-template-areas:    'navigation-bar'
                             'add-confessions'
                             '.'
@@ -24,7 +24,7 @@
 #add-confessions {
     grid-area: add-confessions;
     display: grid;
-    grid-template-rows: 20vh 5vh;
+    grid-template-rows: 25vh 5vh;
     grid-template-areas:    'confession-reason'
                             'confession-button';
 }
@@ -185,6 +185,14 @@
 
 @media only screen and (max-width: 850px) {
 
+    #confessions {
+        grid-template-rows: 15vh 40vh 5vh auto 10vh;
+    }
+
+    #add-confessions {
+        grid-template-rows: 35vh 5vh;
+    }
+
     #confession-card {
         height: 50vh;
         grid-template-rows: 3vh 1vh 17vh 1vh 22vh 1vh 5vh;
@@ -202,11 +210,11 @@
 @media only screen and (max-width: 650px) {
 
     #confessions {
-        grid-template-rows: 15vh 70vh auto;
+        grid-template-rows: 15vh 60vh 5vh auto 10vh;
     }
 
     #add-confessions {
-        grid-template-rows: 45vh 5vh;
+        grid-template-rows: 55vh 5vh;
     }
 
     #confession-card {
@@ -220,5 +228,27 @@
         grid-template-areas:    'feeling-list'
                                 '.'
                                 'feeling-selected';
+    }
+}
+
+@media only screen and (max-width: 350px) {
+
+    #confessions {
+        grid-template-rows: 15vh 80vh 5vh auto 10vh;
+    }
+
+    #add-confessions {
+        grid-template-rows: 75vh 5vh;
+    }
+}
+
+@media only screen and (max-width: 250px) {
+
+    #confessions {
+        grid-template-rows: 15vh 100vh 5vh auto 10vh;
+    }
+
+    #add-confessions {
+        grid-template-rows: 95vh 5vh;
     }
 }
