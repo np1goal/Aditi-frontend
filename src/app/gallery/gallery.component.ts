@@ -43,7 +43,7 @@ export class GalleryComponent implements OnInit {
 
   ngOnInit() {
     this.artService.getArts()
-      .subscribe((arts: Art[]) => {this.arts = arts; console.log(this.arts);});
+      .subscribe((arts: Art[]) => this.arts = arts);
   }
 
   getArtInfo(art: String, isConfessionArt: Boolean) {

@@ -9,11 +9,11 @@ export class ConfessionService {
   constructor(private webService: WebService) { }
 
   getConfessions() {
-    return this.webService.get('confessions');
+    return this.webService.get('getConfessions');
   }
 
   createConfessions(confession: string, feelings: string[], isApproved: boolean) {
     console.log('In Confession Service ' + confession + ' ' + feelings + ' ' + isApproved);
-    return this.webService.post('confession', { confession, feelings, isApproved });
+    return this.webService.post('postConfession', { confession, feelings, isApproved });
   }
 }
